@@ -1,19 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+import { Home, Login } from "./containers/Public";
+import { path } from "./ultils/constant";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen w-screen bg-primary">
+      <Routes>
+        <Route path={path.HOME} element={<Home />}>
+          <Route path={path.LOGIN} element={<Login />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
