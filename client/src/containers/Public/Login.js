@@ -101,7 +101,7 @@ const Login = () => {
             label={"HỌ TÊN"}
             value={payload.name}
             setValue={setPayload}
-            type={"name"}
+            keyPayload={"name"}
           />
         )}
         <InputForm
@@ -110,7 +110,7 @@ const Login = () => {
           label={"SỐ ĐIỆN THOẠI"}
           value={payload.phone}
           setValue={setPayload}
-          type={"phone"}
+          keyPayload={"phone"}
         />
         <InputForm
           setInvalidFields={setInvalidFields}
@@ -118,7 +118,8 @@ const Login = () => {
           label={"MẬT KHẨU"}
           value={payload.password}
           setValue={setPayload}
-          type={"password"}
+          keyPayload={"password"}
+          type="password"
         />
         <Button
           text={isRegister ? "Đăng kí" : "Đăng nhập"}
