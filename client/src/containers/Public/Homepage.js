@@ -5,13 +5,7 @@ import { List, Pagination } from "./index";
 import { useSelector } from "react-redux";
 
 const Homepage = () => {
-  // Sử dụng nullish coalescing operator (??) để xác định giá trị mặc định cho categories, prices và areas
-  const { categories, prices, areas } = useSelector((state) => state.app) ?? {};
-
-  // Kiểm tra nếu categories, prices hoặc areas là undefined, trả về một thông báo hoặc hiển thị nội dung khác
-  if (!categories || !prices || !areas) {
-    return <div>Loading...</div>;
-  }
+  const { categories, prices, areas } = useSelector((state) => state.app);
 
   return (
     <div className="w-full flex flex-col gap-3">
