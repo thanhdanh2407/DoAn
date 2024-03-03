@@ -3,6 +3,7 @@ import { Button, InputForm } from "../../components";
 import { useLocation, useNavigate } from "react-router-dom";
 import * as actions from "../../store/actions";
 import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const location = useLocation();
@@ -24,6 +25,10 @@ const Login = () => {
   useEffect(() => {
     isLoggedIn && navigeta("/");
   }, [isLoggedIn, navigeta]);
+
+  useEffect(() => {
+    msg && Swal.fire("Oops !", msg, "error");
+  }, [msg, update]);
 
   const handleSubmit = async () => {
     let finalPayload = isRegister
