@@ -11,7 +11,6 @@ app.use(
     methods: ["POST", "GET", "PUT", "DELETE"],
   })
 );
-
 app.use(express.json()); //đọc dữ liệu của json
 app.use(express.urlencoded({ extended: true })); // đọc được dạng form đã ta từ body
 

@@ -1,14 +1,14 @@
-import axios from '../axiosConfig'
+import axios from "../axiosConfig";
 
-export const apiGetCurrent = () => new Promise(async (resolve, reject) => {
+export const apiGetCurrent = () =>
+  new Promise(async (resolve, reject) => {
     try {
-        const response = await axios({
-            method: 'get',
-            url: '/api/v1/user/get-current',
-        })
-        resolve(response)
-
+      const response = await axios({
+        method: "get",
+        url: "/api/v1/user/get-current",
+      });
+      resolve(response);
     } catch (error) {
-        reject(error)
+      reject(error);
     }
-})
+  });
